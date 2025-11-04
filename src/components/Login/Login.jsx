@@ -1,5 +1,7 @@
 import React from "react";
+import { Link } from "react-router";
 import NavBar from "../../nav/Nav";
+import Signup from "../signup/signup";
 
 function Login() {
   return (
@@ -11,13 +13,14 @@ function Login() {
       <div className="flex h-[70vh] justify-center items-center ">
         <form
           action=""
-          className="shadow-lg w-95 h-110 gap-6 rounded-lg flex flex-col mt-20 p-10"
-        > 
-        <div>
-            <h2 className="text-3xl font-bold text-center"><span className="">Eschyosys</span>-Login </h2>
-           <p className="text-sm text-center mt-2">Log into Your account</p>
-        </div>
-          
+          className="shadow-lg w-full max-w-md h-auto gap-6 rounded-lg flex flex-col mt-30 p-6 sm:p-10 mx-4"
+        >
+          <div>
+            <h2 className="text-3xl font-bold text-center">
+              <span className="">Eschyosys</span>-Login{" "}
+            </h2>
+            <p className="text-sm text-center mt-2">Log into Your account</p>
+          </div>
 
           <input
             type="text"
@@ -38,7 +41,6 @@ function Login() {
           </button>
 
           <div className="flex justify-between ">
-
             <div className="flex gap-1">
               <input type="checkbox" id="remember" />
               <label htmlFor="remember" className="text-sm text-gray-700">
@@ -49,10 +51,18 @@ function Login() {
             <p className="text-sm text-blue-600 hover:underline cursor-pointer">
               Forgot Password?
             </p>
-            </div>
+          </div>
 
-            <p className=" text-sm text-center font-semibold">Don't have an account? <a className="text-blue-600 hover:underline cursor-pointer">Signup</a></p>
-           </form>
+          <p className=" text-sm text-center font-semibold">
+            Don't have an account?
+            <Link
+              to="/signup"
+              className="text-blue-600 hover:underline cursor-pointer"
+            >
+              Signup
+            </Link>
+          </p>
+        </form>
       </div>
     </>
   );
