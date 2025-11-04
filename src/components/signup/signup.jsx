@@ -1,6 +1,5 @@
 import React from "react";
 import NavBar from "../../nav/Nav";
-import Login from "../Login/Login";
 import { Link } from "react-router";
 
 function Signup() {
