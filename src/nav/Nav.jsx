@@ -4,12 +4,14 @@ function NavBar() {
   return (
     <>
     
-    <nav className="flex w-full items-center justify-between px-8 shadow-sm"> 
+    
+    <nav className="flex w-full items-center justify-between px-8 py-6 shadow-sm"> 
         <div className="flex items-center gap-3">
-            <div className="flex items-center justify-center gap-2">
+            <div className="flex items-center justify-center gap-2 ">
             <img src="https://student.eschosys.com/images/logo.jpg" 
             alt="Logo" 
             width={60}
+            className='bg-blue-50'
              />
              <p className="text-md font-bold logo xsm:hidden md:flex"> ESCHOSYS BHIFMET</p>
              </div>
@@ -17,10 +19,8 @@ function NavBar() {
             </div>
 
          <div className='flex items-center gap-4'>
-            <button className='bg-yellow-600 text-white rounded-lg px-3 py-1 cursor-pointer transition-all duration-300 ease-in-out hover:bg-yellow-500'>
-                Sign Up
-                </button>
-            <button className='bg-blue-900 text-white rounded-lg px-3 py-1 cursor-pointer transition-all duration-300 ease-in-out hover:bg-blue-800 flex items-center gap-2'>
+           
+            <button className='text-gray-500 rounded-lg px-3 py-1 cursor-pointer transition-all duration-300 ease-in-out shadow-lg border flex items-center gap-2 hover:bg-gray-800 hover:text-white'>
                 <LogIn size={17}/>Login
                 </button>
          </div>
