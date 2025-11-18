@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router";
-import NavBar from "../../nav/Nav";
+import NavBar from "../../../nav/Nav";
 import { useState } from "react";
 
 function Login() {
@@ -19,10 +19,7 @@ function Login() {
            const value = e.target.value;
         
            setFormData((prev) => ({...prev, [name]: value}));
-              
-           console.log(formData);
-           
-          }
+              }
 
         function handleOnSubmit(e){
             e.preventDefault();
@@ -50,10 +47,10 @@ function Login() {
         <NavBar />
       </div>
 
-      <div className="flex h-[70vh] justify-center items-center ">
+      <div className="flex h-screen justify-center items-center text-white bg-no-repeat bg-center bg-cover bg-[url(https://eschosys.com/wp-content/uploads/2024/08/slide_image.jpg)]">
         <form
           action=""
-          className="shadow-lg w-full max-w-md h-auto gap-6 rounded-lg flex flex-col mt-30 p-6 sm:p-10 mx-4"
+          className="shadow-lg w-full max-w-md h-auto gap-6 rounded-lg flex flex-col p-6 sm:p-10 mx-4 bg-transparent backdrop-blur-lg"
           onSubmit={handleOnSubmit}
         >
           <div>
@@ -79,28 +76,28 @@ function Login() {
             onChange={handleOnChange}
           /> {error.password && (<p className="text-red-500 text-sm">{error.password}</p>)}
 
-          <button className="bg-blue-800 text-white rounded-lg p-2 hover:bg-blue-600 cursor-pointer transition-all duration-300 ease-in-out">
+          <button className="bg-yellow-600 text-white rounded-lg p-2 hover:bg-yellow-400 cursor-pointer transition-all duration-300 ease-in-out">
             Login
           </button>
 
           <div className="flex justify-between ">
             <div className="flex gap-1">
               <input type="checkbox" id="remember" />
-              <label htmlFor="remember" className="text-sm text-gray-700">
+              <label htmlFor="remember" className="text-sm text-white00">
                 Remember Me
               </label>
             </div>
 
-            <p className="text-sm text-blue-600 hover:underline cursor-pointer">
+            <Link to={"/forgot-password"} className="text-sm text-yellow-600 hover:underline cursor-pointer">
               Forgot Password?
-            </p>
+            </Link>
           </div>
 
           <p className=" text-sm text-center font-semibold">
-            Don't have an account?
+            Don't have an account? {" "}
             <Link
               to="/signup"
-              className="text-blue-600 hover:underline cursor-pointer"
+              className="text-yellow-600 hover:underline cursor-pointer"
             >
               Signup
             </Link>
