@@ -1,4 +1,4 @@
-import { LayoutDashboard, Book, Users, GraduationCap} from "lucide-react";
+import { LayoutDashboard, Book, Users, GraduationCap, MessageCircle} from "lucide-react";
 
 
 const StudentsRoute = [
@@ -14,7 +14,19 @@ const StudentsRoute = [
     name: "Grades", 
     route: "/student-grades", 
     icon:GraduationCap,
-}
+},
+{
+    id: '3', 
+    name: "Courses", 
+    route: "/student-courses", 
+    icon:Book,
+},
+{
+    id: '4', 
+    name: "Complaints", 
+    route: "/student-complaints", 
+    icon:MessageCircle,
+},
 ];
 
 const adminRoute = [
