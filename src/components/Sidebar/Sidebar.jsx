@@ -22,7 +22,7 @@ function Sidebar({ routes, sidebarOpen, setSidebarOpen }) {
 
   return (
     <div
-      className={`h-screen transition-all duration-300 ease-in-out pt-20 pb-8 fixed ${
+      className={`md:h-screen transition-all duration-300 ease-in-out pt-30 pb-8 fixed bottom-0 z-40 backdrop-blur-lg top-0 ${
         sidebarOpen ? "w-70" : "w-15"
       } shadow px-2 flex flex-col justify-between pb-5`}
     >

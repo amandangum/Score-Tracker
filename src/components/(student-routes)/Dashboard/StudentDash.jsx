@@ -5,6 +5,7 @@ import DashboardNav from '../../../nav/DashboardNav';
 import DashboardCard from '../../dashboard/DashboardCard';
 import { Book, BookOpen, GraduationCap } from 'lucide-react';
 import Announcements from '../../dashboard/Announcements';
+import StudentRanking from '../../dashboard/StudentRanking';
 
 function StudentDash({sidebarOpen, setSidebarOpen }) {
   return (
@@ -18,7 +19,7 @@ function StudentDash({sidebarOpen, setSidebarOpen }) {
     setSidebarOpen={setSidebarOpen}/>
    </div>
 
-   <div className={`${sidebarOpen ? "ml-75" : "ml-20"} mt-6 pt-20`} >
+   <div className={`${sidebarOpen ? "md:ml-75" : "ml-18 w-[88%]"} mt-15 pt-20`} >
        <h1 className='text-2xl font-medium'>Dashboard</h1>
 
 
@@ -52,6 +53,11 @@ function StudentDash({sidebarOpen, setSidebarOpen }) {
        <div className='mt-8'>
         <h1 className='font-medium text-2xl'>Announcements</h1>
           <Announcements />
+       </div>
+
+       <div className='mt-10'>
+        <h1 className='font-medium text-2xl'>Student Ranking</h1>
+        <StudentRanking />
        </div>
    </div>
    

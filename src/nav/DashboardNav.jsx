@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 function DashboardNav() {
   return (
-    <div className="flex items-center justify-between shadow h-[13vh] pr-2 fixed top-0 w-full backdrop-blur-lg">
+    <div className="flex items-center justify-between shadow h-[13vh] pr-2 fixed top-0 w-full backdrop-blur-lg z-50">
       <div className="flex items-center gap-5">
         <div className="flex items-center justify-center gap-2 ">
           <img

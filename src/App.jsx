@@ -3,6 +3,7 @@ import Homepage from "./components/home/Homepage";
 import Login from "./components/(auth-routes)/Login/Login";
 import Signup from "./components/(auth-routes)/signup/signup";
 import StudentDash from "./components/(student-routes)/Dashboard/StudentDash";
+import StudentGrade from "./components/(student-routes)/Dashboard/Grades/StudentGrade";
 import ForgotPassword from "./components/(auth-routes)/ForgotPassword/ForgotPassword";
 import { useState } from "react";
 import TeacherDash from "./components/(teacher-routes)/Teacher";
@@ -29,6 +30,10 @@ function App(){
                                        setSidebarOpen={setSidebarOpen} />}/>
 
       <Route path="/admin-dashboard" element={<AdminDash
+                                       sidebarOpen={sidebarOpen} 
+                                       setSidebarOpen={setSidebarOpen} />}/>
+
+      <Route path="/student-grades" element={<StudentGrade 
                                        sidebarOpen={sidebarOpen} 
                                        setSidebarOpen={setSidebarOpen} />}/>
     </Routes>
