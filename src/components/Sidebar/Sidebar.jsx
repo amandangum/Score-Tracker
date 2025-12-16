@@ -54,6 +54,7 @@ function Sidebar({ routes, sidebarOpen, setSidebarOpen }) {
             const IconComponent = route.icon;
             return (
               <Link
+              key={route.route} 
                 to={route.route}
                 className={`flex gap-4  mb-2 px-2 items-center  hover:bg-yellow-200 py-2 hover:text-yellow-700 transition-all duration-300 ease-in-out ${
                   !sidebarOpen && "hover:rounded-lg"

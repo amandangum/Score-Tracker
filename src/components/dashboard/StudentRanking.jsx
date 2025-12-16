@@ -2,9 +2,10 @@ import React from "react";
 
 function StudentRanking() {
   return (
+    
     <div className="mt-5 w-[99%] shadow rounded-2xl p-5">
       <h1 className="text-lg font-semibold">
-        Ranking of Best Student for each course
+       Academic Summary
       </h1>
 
      
