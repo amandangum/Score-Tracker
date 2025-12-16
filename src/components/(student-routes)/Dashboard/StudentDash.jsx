@@ -23,7 +23,7 @@ function StudentDash({sidebarOpen, setSidebarOpen }) {
        <h1 className='text-2xl font-medium'>Dashboard</h1>
 
 
-       <div className='flex items-center gap-3 flex-wrap'>
+       <div className='flex items-center gap-3 flex-wrap'> 
         <DashboardCard
         Icon={<Book />}
         title="Total Courses"
