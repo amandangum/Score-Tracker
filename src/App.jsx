@@ -12,6 +12,7 @@ import TeacherDash from "./components/(teacher-routes)/Teacher";
 import AdminDash from "./components/(admin-routes)/AdminDash";
 import LectCourses from "./components/(teacher-routes)/Courses/LectCourses";
 import StudentSec from "./components/(teacher-routes)/Students/StudentSec";
+import ScoreEntry from "./components/(teacher-routes)/Score/ScoreEntry";
 
 function App(){
    const [sidebarOpen, setSidebarOpen] = useState(true);
@@ -46,6 +47,9 @@ function App(){
                                        sidebarOpen={sidebarOpen} 
                                        setSidebarOpen={setSidebarOpen} />}/>
       <Route path="/lecturer-students" element={<StudentSec
+                                       sidebarOpen={sidebarOpen} 
+                                       setSidebarOpen={setSidebarOpen} />}/>
+      <Route path="/lecturer-score" element={<ScoreEntry
                                        sidebarOpen={sidebarOpen} 
                                        setSidebarOpen={setSidebarOpen} />}/>
       <Route path="/admin-dashboard" element={<AdminDash
