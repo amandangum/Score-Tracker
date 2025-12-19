@@ -10,12 +10,13 @@ import {
 
 const Users = () => {
   const [searchTerm, setSearchTerm] = useState("");
+  const [selectedCourse, setSelectedCourse] = useState("");
   const [users, setUsers] = useState([
     {
       id: 1,
       name: "Michael Smith",
       email: "michealsmith@gmail.com",
-      course: "Advanced Algorithms",
+      course: "Embedded System",
       enrollmentDate: "2024-01-15",
       status: "active",
       avatar: "MS",
@@ -24,7 +25,7 @@ const Users = () => {
       id: 2,
       name: "Rachel Johnson",
       email: "rachealjohnson@gmail.com",
-      course: "Data Structures",
+      course: "Embedded System",
       enrollmentDate: "2024-02-02",
       status: "active",
       avatar: "RJ",
@@ -33,7 +34,7 @@ const Users = () => {
       id: 3,
       name: "Kevin Williams",
       email: "kevinwilliams@gmail.com",
-      course: "Web Development",
+      course: "Data Structure",
       enrollmentDate: "2024-01-28",
       status: "inactive",
       avatar: "KW",
@@ -42,7 +43,7 @@ const Users = () => {
       id: 4,
       name: "Samantha Brown",
       email: "samanthabrown@gmail.com",
-      course: "Advanced Algorithms",
+      course: "Embedded System",
       enrollmentDate: "2024-03-10",
       status: "active",
       avatar: "SB",
@@ -51,19 +52,25 @@ const Users = () => {
       id: 5,
       name: "David Miller",
       email: "davidmiller@gmail.com",
-      course: "Database Systems",
+      course: "Web Development",
       enrollmentDate: "2024-02-20",
       status: "active",
       avatar: "DM",
     },
   ]);
 
-  const filteredUsers = users.filter(
-    (user) =>
-      user.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      user.email.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      user.course.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  const filteredUsers = users.filter((user) => {
+  const matchesSearch =
+    user.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    user.email.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    user.course.toLowerCase().includes(searchTerm.toLowerCase());
+
+  const matchesCourse =
+    selectedCourse === "" || user.course === selectedCourse;
+
+  return matchesSearch && matchesCourse;
+});
+
 
   const toggleStatus = (id) => {
     setUsers(
@@ -96,7 +103,17 @@ const Users = () => {
       </div>
 
       <div className="bg-white p-4 rounded-xl shadow-sm border border-gray-100 mt-10">
-        <div className="flex flex-col md:flex-row gap-4">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-4">
+          <select
+            value={selectedCourse}
+            onChange={(e) => setSelectedCourse(e.target.value)}
+            className="text-gray-500 border cursor-pointer border-gray-300 py-2 md:w-[15%] px-3 rounded-lg focus:outline-none focus:ring-blue-500"
+          >
+            <option value="">All Courses</option>
+            <option value="Embedded System">Embedded System</option>
+            <option value="Data Structure">Data Structure</option>
+            <option value="Web Development">Web Development</option>
+          </select>
           {/* Search */}
           <div className="flex-1 relative">
             <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -105,7 +122,7 @@ const Users = () => {
             <input
               type="text"
               placeholder="Search students by name, email, or course..."
-              className="pl-10 pr-4 py-2 w-full border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="pl-10 pr-4 py-2 w-full border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
             />

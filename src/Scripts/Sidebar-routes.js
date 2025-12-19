@@ -1,4 +1,5 @@
 import { LayoutDashboard, Book, Users, GraduationCap, MessageCircle} from "lucide-react";
+import { FaSchool } from "react-icons/fa";
 
 
 const StudentsRoute = [
@@ -68,7 +69,13 @@ const lecturerRoute = [
         name: "students",
         route: "/lecturer-students",
         icon: Users
-    }
+    },
+    {
+        id:'4',
+        name: "Score",
+        route: "/lecturer-score",
+        icon: FaSchool
+    },
 ];
 
 export {StudentsRoute, adminRoute,lecturerRoute};
