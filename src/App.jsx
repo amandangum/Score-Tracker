@@ -13,6 +13,9 @@ import AdminDash from "./components/(admin-routes)/AdminDash";
 import LectCourses from "./components/(teacher-routes)/Courses/LectCourses";
 import StudentSec from "./components/(teacher-routes)/Students/StudentSec";
 import ScoreEntry from "./components/(teacher-routes)/Score/ScoreEntry";
+import AdminCourses from "./components/(admin-routes)/Courses/AdminCourses";
+import AdminUsers from "./components/(admin-routes)/Users/AdminUsers";
+import AdminComplaints from "./components/(admin-routes)/Complaints/AdminComplaints";
 
 function App(){
    const [sidebarOpen, setSidebarOpen] = useState(true);
@@ -53,6 +56,15 @@ function App(){
                                        sidebarOpen={sidebarOpen} 
                                        setSidebarOpen={setSidebarOpen} />}/>
       <Route path="/admin-dashboard" element={<AdminDash
+                                       sidebarOpen={sidebarOpen} 
+                                       setSidebarOpen={setSidebarOpen} />}/>
+       <Route path="/admin-courses" element={<AdminCourses
+                                       sidebarOpen={sidebarOpen} 
+                                       setSidebarOpen={setSidebarOpen} />}/>
+       <Route path="/admin-users" element={<AdminUsers
+                                       sidebarOpen={sidebarOpen} 
+                                       setSidebarOpen={setSidebarOpen} />}/>
+       <Route path="/admin-complaints" element={<AdminComplaints
                                        sidebarOpen={sidebarOpen} 
                                        setSidebarOpen={setSidebarOpen} />}/>
 

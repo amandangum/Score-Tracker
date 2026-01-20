@@ -102,7 +102,7 @@ const Users = () => {
         </button>
       </div>
 
-      <div className="bg-white p-4 rounded-xl shadow-sm border border-gray-100 mt-10">
+      <div className="bg-white p-4 rounded-xl shadow-sm border border-gray-100 mt-10 w-[98%]">
         <div className="flex flex-col md:flex-row items-center justify-center gap-4">
           <select
             value={selectedCourse}
@@ -139,7 +139,8 @@ const Users = () => {
       </div>
 
       {/* Students Table */}
-      <div className="bg-white rounded-xl shadow-sm overflow-hidden border border-gray-100">
+      <div className="pb-10">
+      <div className="bg-white rounded-xl w-[98%] shadow-sm overflow-hidden border border-gray-100">
         <div className="overflow-x-auto">
           <table className="min-w-full divide-y divide-gray-200">
             <thead className="bg-gray-50">
@@ -226,6 +227,7 @@ const Users = () => {
               ))}
             </tbody>
           </table>
+        </div>
         </div>
 
         {/* Empty State */}

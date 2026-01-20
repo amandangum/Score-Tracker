@@ -49,6 +49,12 @@ const adminRoute = [
         route: "/admin-users",
         icon: Users
     },
+    {
+        id:'4',
+        name: "Complaints",
+        route: "/admin-complaints",
+        icon: MessageCircle
+    },
 ];
 
 const lecturerRoute = [

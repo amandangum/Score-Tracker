@@ -2,6 +2,7 @@ import React from 'react'
 
 function Announcement() {
   return (
+      <div className='pb-10'>
     <div className='md:w-[99%] mt-10 shadow rounded-lg p-5 xsm:w-[90%]'>
          <h1 className='text-lg font-semibold'>Announcements</h1>
           
@@ -9,6 +10,7 @@ function Announcement() {
           <p style={{backgroundColor: "#66BBBB", color:"#055555"}} className='rounded-full p-3 mt-3 text-center md:w-[15%] xsm:w-[50%]'>May 14th 2025</p>
           <p className='md:w-180 mt-5 text-gray-500'>All corrections as regards to the final semester results must be submitted on or before the 14th of May after which
              no additional corrections will be considered</p>   
+        </div>
         </div>
   )
 }
