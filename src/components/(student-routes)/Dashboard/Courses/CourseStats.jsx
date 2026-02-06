@@ -26,6 +26,7 @@ const announcements = [
 
 function CourseStats() {
   return (
+    <div className="pb-10">
     <div className=" md:w-[98%]  shadow-lg rounded-lg p-3 mt-15 xsm:w-[90%]">
       <h2 className="text-2xl font-semibold mb-3">Announcements</h2>
 
@@ -43,6 +44,7 @@ function CourseStats() {
           </li>
         ))}
       </ul>
+    </div>
     </div>
   );
 }
