@@ -11,7 +11,7 @@ import RecentAct from "./RecentAct";
 function Dashboard() {
   return (
     <div>
-      <div className="flex gap-4">
+      <div className="md:flex items-center gap-4">
         <LecturerCard
           Icon={<FaUser />}
           title="Total Users "

@@ -21,6 +21,7 @@ function Sidebar({ routes, sidebarOpen, setSidebarOpen }) {
   };
 
   return (
+    
     <div
       className={`md:h-screen transition-all duration-300 ease-in-out pt-30 pb-8 fixed bottom-0 z-40 backdrop-blur-lg top-0 ${
         sidebarOpen ? "w-70" : "w-15"
@@ -41,6 +42,8 @@ function Sidebar({ routes, sidebarOpen, setSidebarOpen }) {
             />
             {sidebarOpen && <p>John Doe</p>}
           </div>
+             
+             
           <button
             className={`cursor-pointer hover:bg-gray-100 transition-all duration-300 ease-in-out rounded-lg p-2`}
             onClick={() => setSidebarOpen((prev) => !prev)}
