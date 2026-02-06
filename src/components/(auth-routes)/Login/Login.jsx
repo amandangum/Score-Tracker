@@ -84,7 +84,8 @@ function Login() {
             <div className="flex gap-1">
               <input type="checkbox" id="remember" />
               <label htmlFor="remember" className="text-sm text-white00">
-                Remember me
+
+                Remember
               </label>
             </div>
 
