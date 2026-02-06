@@ -4,7 +4,7 @@ function LecturerCard({title, content, textColor, bgColor, Icon}) {
   return (
     <div
       style={{ backgroundColor: bgColor, color: textColor }}
-      className="md:w-70 min-h-32 shadow-lg rounded-2xl p-4 mt-8 xsm:w-[80%] md:flex items-center"
+      className="md:w-70 min-h-32 shadow-lg rounded-2xl p-4 mt-8 xsm:w-[75%] md:flex items-center"
     >
       <div className="flex items-center gap-4">
         

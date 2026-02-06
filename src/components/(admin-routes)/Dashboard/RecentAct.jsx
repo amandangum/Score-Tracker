@@ -119,7 +119,7 @@ function RecentAct() {
                     </div>
                   </div>
 
-                  <div className="flex gap-3">
+                  <div className="md:flex gap-3">
                     <button className="flex items-center gap-1 text-sm text-blue-600 hover:underline">
                       <FiEye /> View
                     </button>

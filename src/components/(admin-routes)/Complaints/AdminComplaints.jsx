@@ -8,7 +8,7 @@ function AdminComplaints({sidebarOpen, setSidebarOpen}) {
     <div>
     <div >
       
-      <DashboardNav/>
+      <DashboardNav />
     <Sidebar 
     routes={adminRoute} 
     sidebarOpen={sidebarOpen} 
