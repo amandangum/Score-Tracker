@@ -2,14 +2,13 @@ import React from "react";
 
 function StudentRanking() {
   return (
-    
+      <div className="pb-10">
     <div className="mt-5 w-[99%] shadow rounded-2xl p-5">
       <h1 className="text-lg font-semibold">
        Academic Summary
       </h1>
 
-     
-
+         
       <div className="overflow-x-auto">
         <table className="w-full mt-10">
           <thead className="bg-[#f0f7ff] border-b border-[#f0f7ff]">
@@ -47,6 +46,7 @@ function StudentRanking() {
           </tbody>
         </table>
       </div>
+    </div>
     </div>
   );
 }

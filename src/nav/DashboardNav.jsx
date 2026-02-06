@@ -1,8 +1,11 @@
-import { Search, Bell, LogOut } from "lucide-react";
+import { Search, Bell, LogOut, Sidebar as Collapse, } from "lucide-react";
 import React from "react";
 import { Link } from "react-router-dom";
 
-function DashboardNav() {
+function DashboardNav({sidebarOpen, setSidebarOpen}) {
+
+  
+
   return (
     <div className="flex items-center justify-between shadow h-[13vh] pr-2 fixed top-0 w-full backdrop-blur-lg z-50">
       <div className="flex items-center gap-5">
@@ -18,8 +21,8 @@ function DashboardNav() {
             ESCHOSYS BHIFMET
           </p>
         </div>
-
-        <div className="flex items-center gap-2 bg-gray-200 rounded-2xl py-2 px-3">
+      
+             <div className="flex items-center gap-2 bg-gray-200 rounded-2xl py-2 px-3">
           <Search size={18} color="gray" />
           <input
            type="text"

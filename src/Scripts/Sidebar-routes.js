@@ -1,4 +1,5 @@
 import { LayoutDashboard, Book, Users, GraduationCap, MessageCircle} from "lucide-react";
+import {  FaPenAlt } from "react-icons/fa";
 
 
 const StudentsRoute = [
@@ -48,6 +49,12 @@ const adminRoute = [
         route: "/admin-users",
         icon: Users
     },
+    {
+        id:'4',
+        name: "Complaints",
+        route: "/admin-complaints",
+        icon: MessageCircle
+    },
 ];
 
 const lecturerRoute = [
@@ -68,7 +75,13 @@ const lecturerRoute = [
         name: "students",
         route: "/lecturer-students",
         icon: Users
-    }
+    },
+    {
+        id:'4',
+        name: "Score",
+        route: "/lecturer-score",
+        icon:  FaPenAlt
+    },
 ];
 
 export {StudentsRoute, adminRoute,lecturerRoute};

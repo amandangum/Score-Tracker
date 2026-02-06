@@ -38,6 +38,8 @@ function Dashboard() {
         textColor="#1A333C"
        />
     </div>
+
+            <div className='pb-10'>
           <div className='mt-15 w-[94%] shadow rounded-2xl p-5'>
             <h1 className='text-xl font-semibold'>Upcoming Classes</h1>
           <Annoucement 
@@ -56,7 +58,7 @@ function Dashboard() {
          time={"4:00pm - 6:00pm"}
          />
           </div>
-        
+        </div>
     </div>
     
   )
